@@ -1,0 +1,487 @@
+/* 共通スタイル */
+:root {
+    --primary-color: #FF6B00;
+    --secondary-color: #FFD166;
+    --text-color: #333;
+    --light-gray: #F5F5F5;
+    --border-color: #E5E5E5;
+    --link-color: #0066CC;
+    --point-color: #FF6600;
+}
+
+body {
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, Meiryo, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #FFFFFF;
+}
+
+.wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.section-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* ヘッダースタイル */
+.header {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.header-logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.tagline {
+    font-size: 14px;
+    margin-left: 15px;
+    color: #666;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin-left: 30px;
+}
+
+.nav-item a {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.loginn-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.loginn-btn:hover {
+    background-color: #FF8633;
+    opacity: 1;
+}
+
+.menu-trigger {
+    display: none;
+    background: none;
+    border: none;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-trigger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    position: absolute;
+    transition: transform 0.3s;
+}
+
+.menu-trigger span:nth-child(1) {
+    top: 0;
+}
+
+.menu-trigger span:nth-child(2) {
+    top: 11px;
+}
+
+.menu-trigger span:nth-child(3) {
+    bottom: 0;
+}
+
+/* ヒーローセクション */
+.hero {
+    background-color: #FFF8E8;
+    padding: 50px 0;
+}
+
+.hero-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+}
+
+.hero-image {
+    flex: 0 0 50%;
+}
+
+.hero-img {
+    max-width: 80%;
+    height: 300px;
+    border-radius: 40px;
+    margin-left: 30px;
+}
+
+.hero-text {
+    flex: 0 0 45%;
+}
+
+.hero-heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    color: var(--primary-color);
+}
+
+.gacha-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(255, 107, 0, 0.3);
+}
+
+.gacha-button.large {
+    padding: 18px 36px;
+    font-size: 20px;
+}
+
+.gacha-button:hover {
+    background-color: #FF8633;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 107, 0, 0.4);
+    opacity: 1;
+}
+
+/* サービス紹介 */
+.about-section {
+    background-color: white;
+}
+
+.about-content {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* 使い方の流れ */
+.howto-section {
+    background-color: #F9F9F9;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.step-card {
+    flex: 1;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+}
+
+.step-header {
+    background-color: var(--primary-color);
+    padding: 15px;
+    text-align: center;
+}
+
+.step-title {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.step-body {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.step-body p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* おすすめガチャ */
+.feature-section {
+    background-color: white;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.feature-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover .feature-img img {
+    transform: scale(1.05);
+}
+
+.feature-info {
+    padding: 20px;
+    position: relative;
+}
+
+.feature-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.feature-text {
+    font-size: 14px;
+    color: #666;
+}
+
+.discount-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* よくある質問 */
+.faq-section {
+    background-color: #F9F9F9;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+    margin-bottom: 15px;
+}
+
+.faq-question h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.faq-answer p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* CTA */
+.cta-section {
+    background-color: #FFF8E8;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.cta-text {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* フッタースタイル */
+.footer {
+    background-color:rgb(143, 116, 47);
+    padding: 60px 0 30px;
+    color: white;
+}
+
+.footer-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-nav-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    color: var(--secondary-color);
+}
+
+.footer-nav-list {
+    list-style: none;
+}
+
+.footer-nav-list li {
+    margin-bottom: 15px;
+}
+
+.footer-nav-list a {
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+    transition: color 0.3s;
+}
+
+.footer-nav-list a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.copyright {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+}
+
+#gacha-result {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 20px;
+    border: 3px solid #FF6B00;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    animation: fadeIn 1s ease-in-out;
+    text-align: center;
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  
+  #gacha-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  
+  #hotel-description {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #444;
+  }
+  
