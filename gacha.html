@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gachavel｜ガチャで旅先が決まる、お得なサプライズ旅行</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="description" content="Gachavelエリアや予算などの条件を入力するだけで、AIがあなたに合った空室ホテルをガチャのように割り当ててくれる宿泊予約サービスです。行き先はランダム。でも、出発日が近いほど最大50%OFFで予約できるお得な仕組みです。">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="CSS/gacha.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- ヘッダー部分 -->
+        <header class="header">
+            <div class="header-inner">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <h1 class="logo">Gachavel</h1>
+                    </a>
+                </div>
+                <p class="tagline">選べないかわりに、安く泊まれる</p>
+                <nav class="global-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#about">サービス</a></li>
+                        <li class="nav-item"><a href="#how">使い方</a></li>
+                        <li class="nav-item"><a href="#faq">FAQ</a></li>
+                    </ul>
+                </nav>
+                <div class="header-user">
+            
+                    <a href="gacha.html" class="loginn-btn">ログイン ▶</a>
+                </div>
+                <button class="menu-trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+        <main class="main-content section-container">
+            <div class="gachasec">
+              <h2 class="section-title">条件を選んでガチャを回そう！</h2>
+              <div class="gachaimege1">
+                <img src="img/gacha.png" alt="ガチャ画像">
+              </div>
+            </div>
+          
+            <!-- ガチャ演出動画 -->
+            <div id="gacha-animation" style="display: none; text-align: center; margin: 30px 0;">
+              <video id="gacha-video" width="400" autoplay muted>
+                <source src="assets/video-1747762518705.mp4" type="video/mp4">
+                お使いのブラウザは video タグをサポートしていません。
+              </video>
+            </div>
+          
+            <!-- ガチャボタン -->
+            <div style="text-align: center; margin-top: 10px;">
+              <button type="button" class="gacha-button large" id="startGacha">ガチャを回す ▶</button>
+            </div>
+          
+            <!-- フォーム -->
+            <form id="gachaForm" class="gacha-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="area">エリア</label>
+                  <select id="area" name="area" required>
+                    <option value="">選択してください</option>
+                    <option value="関東">関東</option>
+                    <option value="関西">関西</option>
+                    <option value="東北">東北</option>
+                    <option value="九州">九州</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="purpose">旅の目的</label>
+                  <select id="purpose" name="purpose">
+                    <option value="">選択してください</option>
+                    <option value="グルメ">グルメ</option>
+                    <option value="絶景">絶景</option>
+                    <option value="温泉">温泉</option>
+                    <option value="アクティビティ">アクティビティ</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="budget">予算</label>
+                  <select id="budget" name="budget">
+                    <option value="">選択してください</option>
+                    <option value="～5000円">～5000円</option>
+                    <option value="5000円〜1万円">5000円〜1万円</option>
+                    <option value="1万円〜2万円">1万円〜2万円</option>
+                    <option value="2万円以上">2万円以上</option>
+                  </select>
+                </div>
+              </div>
+          
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="date">宿泊日（本日から7日以内）</label>
+                  <input type="date" id="date" name="date" required />
+                </div>
+                <div class="form-group">
+                  <label for="people">人数</label>
+                  <select id="people" name="people">
+                    <option value="">選択してください</option>
+                    <option value="1人">1人</option>
+                    <option value="2人">2人</option>
+                    <option value="3人以上">3人以上</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          
+            <!-- ガチャ結果表示エリア -->
+<div id="gacha-result" style="display: none; text-align: center; margin-top: 40px;">
+    <p style="font-size: 20px; margin-bottom: 20px;">今回選ばれたホテルはこちら！！</p>
+    <img id="gacha-image" src="" alt="ガチャ結果ホテル画像" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  </div>
+  
+         
+          </main>
+          
+          
+        
+         
+
+       
+
+        <!-- フッター部分 -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-nav">
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">GachaBellについて</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#about">サービス概要</a></li>
+                            <li><a href="#how">使い方</a></li>
+                            <li><a href="#faq">よくある質問</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">対応エリア</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#">全国エリア一覧</a></li>
+                            <li><a href="#">人気の観光地</a></li>
+                            <li><a href="#">提携ホテル一覧</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">お問い合わせ</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#">お問い合わせフォーム</a></li>
+                            <li><a href="#">サポートセンター</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">各種規約</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#">利用規約</a></li>
+                            <li><a href="#">プライバシーポリシー</a></li>
+                            <li><a href="#">特定商取引法に基づく表記</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p class="copyright">&copy; 2025 GachaBell</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+<script>
+  $(function () {
+    const today = new Date();
+    const maxDate = new Date(today);
+    maxDate.setDate(today.getDate() + 7);
+
+    const formatDate = (d) => d.toISOString().split("T")[0];
+
+    $("#date").attr("min", formatDate(today));
+    $("#date").attr("max", formatDate(maxDate));
+  });
+</script>
+
+<script>
+    $(function () {
+      const hotelImages = [
+        "img/Y318775159.jpg",
+        "img/onnsenn.jpg",
+        "img/Y397245AL9.jpg"
+        
+      ];
+      console.log (hotelImages)
+    
+      $('#startGacha').on('click', function () {
+        const area = $('#area').val();
+        if (!area) {
+          alert("エリアを選択してください");
+          return;
+        }
+    
+        // 非表示にしてガチャアニメーション表示
+        $('.gachasec, #gachaForm, #gacha-result').hide();
+        $('#gacha-animation').show();
+    
+        // 動画演出のあとにホテル画像を表示
+        setTimeout(function () {
+          const randomIndex = Math.floor(Math.random() * hotelImages.length);
+          $('#gacha-image').attr('src', hotelImages[randomIndex]);
+    
+          $('#gacha-animation').fadeOut(400, function () {
+            $('#gacha-result').fadeIn();
+          });
+        }, 5000); // 動画が5秒間
+      });
+    });
+    </script>
+    
+
+
+</body>
+</html>
