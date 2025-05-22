@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gachavel｜ガチャで旅先が決まる、お得なサプライズ旅行</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="description" content="Gachavelエリアや予算などの条件を入力するだけで、AIがあなたに合った空室ホテルをガチャのように割り当ててくれる宿泊予約サービスです。行き先はランダム。でも、出発日が近いほど最大50%OFFで予約できるお得な仕組みです。">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- ヘッダー部分 -->
+        <header class="header">
+            <div class="header-inner">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <h1 class="logo">Gachavel</h1>
+                    </a>
+                </div>
+                <p class="tagline">選べないかわりに、安く泊まれる</p>
+                <nav class="global-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#about">サービス</a></li>
+                        <li class="nav-item"><a href="#how">使い方</a></li>
+                        <li class="nav-item"><a href="#faq">FAQ</a></li>
+                    </ul>
+                </nav>
+                <div class="header-user">
+                    <a href="gacha.html" class="loginn-btn">ログイン ▶</a>
+                </div>
+                <button class="menu-trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- メインコンテンツ -->
+        <main class="main-content">
+            <!-- ヒーローセクション -->
+            <section class="hero">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <div class="hero-image">
+                            <img src="ChatGPT Image 2025年5月18日 23_39_32.png" alt="旅のガチャイメージ" class="hero-img">
+                        </div>
+                        <div class="hero-text">
+                            <h2 class="hero-heading">宿泊先がランダムで決まる、<br>お得なサプライズ予約</h2>
+                            <a href="gacha.html" class="gacha-button">ガチャを回す ▶</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- サービス紹介 -->
+            <section id="about" class="about-section">
+                <div class="section-container">
+                    <h3 class="section-title">Gachavelとは？</h3>
+                    <div class="about-content">
+                        <p>
+                            Gachavel （ガチャベル）は、エリアや予算などの条件を入力するだけで、<br>
+                            AIがあなたに合った空室ホテルを"ガチャ"のように割り当ててくれる宿泊予約サービスです。<br>
+                            行き先はランダム。でも、出発日が近いほど安く宿泊予約ができるお得な仕組みです。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 使い方の流れ -->
+            <section id="how" class="howto-section">
+                <div class="section-container">
+                    <h3 class="section-title">使い方はとってもカンタン！</h3>
+                    <div class="steps-container">
+                        <div class="step-card">
+                            <div class="step-header">
+                                <h4 class="step-title">STEP 1</h4>
+                            </div>
+                            <div class="step-body">
+                                <p>希望のエリア・日付・予算などを選ぶ</p>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-header">
+                                <h4 class="step-title">STEP 2</h4>
+                            </div>
+                            <div class="step-body">
+                                <p>AIが条件に合う空室ホテルを自動アサイン</p>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-header">
+                                <h4 class="step-title">STEP 3</h4>
+                            </div>
+                            <div class="step-body">
+                                <p>その場で宿泊先を公開＆予約確定！</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- エリアから選んでガチャ -->
+            <section class="feature-section">
+                <div class="section-container">
+                    <h3 class="section-title">エリアから選んでガチャ </h3>
+                    <div class="feature-list">
+                        <div class="feature-card">
+                            <a href="gacha.html">
+                                <div class="feature-img">
+                                    <img src="Y302533696.jpg" alt="関東エリア">
+                                </div>
+                                <div class="feature-info">
+                                    <h4 class="feature-title">関東エリア</h4>
+                                    <p class="feature-text">東京・神奈川・千葉・埼玉など</p>
+                                    <div class="discount-badge">MAX 40% OFF</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="feature-card">
+                            <a href="gacha.html">
+                                <div class="feature-img">
+                                    <img src="Y318775159.jpg" alt="関西エリア">
+                                </div>
+                                <div class="feature-info">
+                                    <h4 class="feature-title">関西エリア</h4>
+                                    <p class="feature-text">大阪・京都・兵庫など</p>
+                                    <div class="discount-badge">MAX 45% OFF</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="feature-card">
+                            <a href="gacha.html">
+                                <div class="feature-img">
+                                    <img src="Y397245AL9.jpg" alt="東北エリア">
+                                </div>
+                                <div class="feature-info">
+                                    <h4 class="feature-title">東北エリア</h4>
+                                    <p class="feature-text">仙台・山形・青森など</p>
+                                    <div class="discount-badge">MAX 50% OFF</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+             <!-- 金額別-->
+             <section class="feature-section">
+                <div class="section-container">
+                    <h3 class="section-title">予算から選ぶ</h3>
+                    <div class="feature-list">
+                        <div class="feature-card">
+                            <a href="gacha.html">
+                                <div class="feature-img">
+                                    <img src="Y377180038.jpg" alt="5,000円～10,000円">
+                                </div>
+                                <div class="feature-info">
+                                    <h4 class="feature-title">5,000円～10,000円</h4>
+                                    <p class="feature-text">地方のビジネスホテルなど</p>
+                                    <div class="discount-badge">MAX 40% OFF</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="feature-card">
+                            <a href="gacha.html">
+                                <div class="feature-img">
+                                    <img src="1.png" alt="10,000円～15,000円">
+                                </div>
+                                <div class="feature-info">
+                                    <h4 class="feature-title">10,000円～15,000円</h4>
+                                    <p class="feature-text">シティホテル・旅館</p>
+                                    <div class="discount-badge">MAX 45% OFF</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="feature-card">
+                            <a href="gacha.html">
+                                <div class="feature-img">
+                                    <img src="okinawa-luxuryhotels22.jpg" alt="温泉特化">
+                                </div>
+                                <div class="feature-info">
+                                    <h4 class="feature-title">15,000円～20,000円</h4>
+                                    <p class="feature-text">ハイクラス施設を含む</p>
+                                    <div class="discount-badge">MAX 50% OFF</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+                      <!-- テーマ別-->
+                      <section class="feature-section">
+                        <div class="section-container">
+                            <h3 class="section-title">テーマから選ぶ</h3>
+                            <div class="feature-list">
+                                <div class="feature-card">
+                                    <a href="gacha.html">
+                                        <div class="feature-img">
+                                            <img src="Y377180038.jpg" alt="5,000円～10,000円">
+                                        </div>
+                                        <div class="feature-info">
+                                            <h4 class="feature-title">温泉宿</h4>
+                                            <p class="feature-text">全国の温泉宿</p>
+                                            <div class="discount-badge">MAX 40% OFF</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="feature-card">
+                                    <a href="gacha.html">
+                                        <div class="feature-img">
+                                            <img src="1.png" alt="10,000円～15,000円">
+                                        </div>
+                                        <div class="feature-info">
+                                            <h4 class="feature-title">家族旅行</h4>
+                                            <p class="feature-text">子連れにやさしい宿を厳選</p>
+                                            <div class="discount-badge">MAX 45% OFF</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="feature-card">
+                                    <a href="gacha.html">
+                                        <div class="feature-img">
+                                            <img src="okinawa-luxuryhotels22.jpg" alt="温泉特化">
+                                        </div>
+                                        <div class="feature-info">
+                                            <h4 class="feature-title">カップル旅行</h4>
+                                            <p class="feature-text">カップルにうれしい宿を厳選</p>
+                                            <div class="discount-badge">MAX 50% OFF</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+            <!-- よくある質問 -->
+            <section id="faq" class="faq-section">
+                <div class="section-container">
+                    <h3 class="section-title">よくあるご質問</h3>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>本当に宿泊先はランダムですか？</h4>
+                            </div>
+                            <div class="faq-answer">
+                                <p>→ ランダムですが、事前にエリアや予算、テーマを設定できます。</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>宿泊先はいつわかりますか？</h4>
+                            </div>
+                            <div class="faq-answer">
+                                <p>→ 予約と同時に即時公開されます。旅の準備はすぐにできます。</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>もし気に入らない宿だったら？</h4>
+                            </div>
+                            <div class="faq-answer">
+                                <p>→ 1回だけ「再ガチャ」する有料オプションも検討中です。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="cta-section">
+                <div class="section-container">
+                    <div class="cta-content">
+                        <h3 class="cta-title">さあ、あなたも旅のガチャを回してみよう！</h3>
+                        <p class="cta-text">行き先はお楽しみ。でも、お得なのは間違いなし。</p>
+                        <a href="gacha.html" class="gacha-button large">今すぐホテルガチャ ▶</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- フッター部分 -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-nav">
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">GachaBellについて</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#about">サービス概要</a></li>
+                            <li><a href="#how">使い方</a></li>
+                            <li><a href="#faq">よくある質問</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">対応エリア</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#">全国エリア一覧</a></li>
+                            <li><a href="#">人気の観光地</a></li>
+                            <li><a href="#">提携ホテル一覧</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">お問い合わせ</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#">お問い合わせフォーム</a></li>
+                            <li><a href="#">サポートセンター</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">各種規約</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#">利用規約</a></li>
+                            <li><a href="#">プライバシーポリシー</a></li>
+                            <li><a href="#">特定商取引法に基づく表記</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p class="copyright">&copy; 2025 GachaBell</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>
